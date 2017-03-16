@@ -211,3 +211,6 @@ html, body {
 .mdl-demo .mdl-menu__container {
   z-index: 99;
 }
+.gradient_background {
+  background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
+}
