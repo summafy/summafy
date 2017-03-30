@@ -16,7 +16,7 @@
 ## Setup
 * `git clone https://github.com/summafy/summafy`
 * `cd summafy/`
-* `git clone https://github.com/summafy/summafy --branch gh-pages dist`
+* **(SKIP THIS)** `git clone https://github.com/summafy/summafy --branch gh-pages dist`
 * `npm install`
 
 ## Commands
