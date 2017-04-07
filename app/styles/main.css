@@ -226,5 +226,8 @@ html, body {
   max-width: 100%;
 }
 .mdl-card__media > a > img:hover {
-    opacity: 0.6;
+  opacity: 0.6;
+}
+.mdl-navigation > .mdl-navigation__link > .material-icons {
+  margin-right: 10px;
 }
