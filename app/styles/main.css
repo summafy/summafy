@@ -30,6 +30,7 @@ html, body {
 .mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row h3 {
   font-size: inherit;
 }
+/*
 .mdl-demo .mdl-layout__tab-bar-button {
   display: none;
 }
@@ -62,6 +63,7 @@ html, body {
   padding: 8px;
   padding-top: 48px;
 }
+*/
 .mdl-demo .mdl-card {
   height: auto;
   display: flex;
@@ -71,12 +73,12 @@ html, body {
   height: auto;
 }
 .mdl-demo .mdl-card .mdl-card__supporting-text {
-  margin: 40px;
+  margin: 20px;
   flex-grow: 1;
   padding: 0;
   color: inherit;
-  width: calc(100% - 80px);
 }
+/*
 .mdl-demo.mdl-demo .mdl-card__supporting-text h4 {
   margin-top: 0;
   margin-bottom: 20px;
@@ -104,7 +106,6 @@ html, body {
   top: 36px;
   z-index: 999;
 }
-
 .mdl-demo .mdl-layout__content section:not(:last-of-type) {
   position: relative;
   margin-bottom: 48px;
@@ -211,6 +212,19 @@ html, body {
 .mdl-demo .mdl-menu__container {
   z-index: 99;
 }
+*/
 .gradient_background {
   background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
+}
+.mdl-demo .mdl-card:hover {
+  background-color: rgba(0, 0, 0, 0.025);
+}
+.mdl-card__media {
+    margin: 0;
+}
+.mdl-card__media > img {
+  max-width: 100%;
+}
+.mdl-card__title-text {
+  font-weight: bold;
 }
