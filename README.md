@@ -1,4 +1,5 @@
-# Summafy
+<img src="https://github.com/summafy/summafy/blob/master/app/images/summafy.png" width="128" height="128">
+
 * [GitHub](https://github.com/summafy/summafy)
 * [Live website](https://summafy.github.io/summafy)
 
@@ -9,7 +10,8 @@
 * npm `^v4.4.0`
 * gulp (as global package) `^v3.9.1`
     * `npm install --global gulp`
-    
+* Any text editor with an [EditorConfig](http://editorconfig.org/) plugin
+
 #### Recommended
 * [Brackets](http://brackets.io/) - For live preview of the webpage
 
