@@ -24,3 +24,13 @@
 * `gulp serve` - Watch for changes and automatically refresh across devices
 * `gulp serve:dist` - Serve the fully built and optimized site
 * `gulp pagespeed` - Performance insights
+
+## Attributions
+* [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/)
+* Stock images under [CCO License](https://creativecommons.org/publicdomain/zero/1.0/)
+    * [Unsplash](https://unsplash.com/)
+    * [Pixaby](https://pixabay.com/)
+    * [Pexels](https://www.pexels.com/)
+
+## License
+This project is licensed under the [Apache License 2.0](https://github.com/summafy/summafy/blob/master/LICENSE)
