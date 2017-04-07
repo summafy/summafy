@@ -38,6 +38,9 @@
     <!-- Material Design Lite page styles -->
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
 
+    <!-- mdl-selectfield -->
+    <link rel="stylesheet" href="../node_modules/mdl-selectfield/dist/mdl-selectfield.min.css">
+
     <!-- Your styles -->
     <link rel="stylesheet" href="styles/main.css">
 
@@ -155,8 +158,18 @@
                                     <span class="mdl-checkbox__label">Physically Disabled</span>
                                 </label>
                             </div>
-                            <div class="mdl-card__form-spacer">
-
+                            <div>
+                                <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
+                                    <select class="mdl-selectfield__select" id="category">
+                                        <option value=""></option>
+                                        <option value="option1">General</option>
+                                        <option value="option2">SC</option>
+                                        <option value="option3">ST</option>
+                                        <option value="option4">OBC</option>
+                                    </select>
+                                    <div class="mdl-selectfield__icon"><i class="material-icons">arrow_drop_down</i></div>
+                                    <label class="mdl-selectfield__label" for="category">Category</label>
+                                </div>
                             </div>
                         </form>
                         <div class="mdl-card__actions mdl-card--border">
@@ -178,6 +191,7 @@
     </div>
 
     <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script src="../node_modules/mdl-selectfield/dist/mdl-selectfield.min.js"></script>
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
