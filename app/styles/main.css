@@ -73,7 +73,9 @@ html, body {
   height: auto;
 }
 .mdl-demo .mdl-card .mdl-card__supporting-text {
-  margin: 20px;
+  margin: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
   flex-grow: 1;
   padding: 0;
   color: inherit;
@@ -224,7 +226,4 @@ html, body {
 }
 .mdl-card__media > img {
   max-width: 100%;
-}
-.mdl-card__title-text {
-  font-weight: bold;
 }
