@@ -37,6 +37,7 @@
     * [Pexels](https://www.pexels.com/)
 * [Material Icons](https://material.io/icons/)
 * [Material Design Lite](https://getmdl.io/)
+* [mdl-selectfield](https://github.com/mebibou/mdl-selectfield) under [MIT License](https://github.com/mebibou/mdl-selectfield/blob/master/LICENSE)
 
 ## License
 This project is licensed under the [Apache License 2.0](https://github.com/summafy/summafy/blob/master/LICENSE)
