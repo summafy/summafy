@@ -39,7 +39,5 @@
   "eslintConfig": {
     "extends": "google"
   },
-  "dependencies": {
-    "mdl-selectfield": "^1.0.4"
-  }
+  "dependencies": {}
 }
