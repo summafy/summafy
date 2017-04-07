@@ -26,6 +26,8 @@
 * `gulp serve` - Watch for changes and automatically refresh across devices
 * `gulp serve:dist` - Serve the fully built and optimized site
 * `gulp pagespeed` - Performance insights
+* `npm test` - Lifecycle script 'test'
+* `npm run-script` - Build and optimize site, commit `/dist` to `gh-pages` branch and push to GitHub
 
 ## Attributions
 * [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/)
@@ -33,6 +35,8 @@
     * [Unsplash](https://unsplash.com/)
     * [Pixaby](https://pixabay.com/)
     * [Pexels](https://www.pexels.com/)
+* [Material Icons](https://material.io/icons/)
+* [Material Design Lite](https://getmdl.io/)
 
 ## License
 This project is licensed under the [Apache License 2.0](https://github.com/summafy/summafy/blob/master/LICENSE)
