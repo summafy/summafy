@@ -218,12 +218,13 @@ html, body {
 .gradient_background {
   background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
 }
-.mdl-demo .mdl-card:hover {
-  background-color: rgba(0, 0, 0, 0.025);
-}
 .mdl-card__media {
-    margin: 0;
+  margin: 0;
+  background-color: black;
 }
-.mdl-card__media > img {
+.mdl-card__media > a > img {
   max-width: 100%;
+}
+.mdl-card__media > a > img:hover {
+    opacity: 0.6;
 }
