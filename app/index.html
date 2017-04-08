@@ -38,6 +38,9 @@
     <!-- Material Design Lite page styles -->
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
 
+    <!-- mdl-selectfield -->
+    <link rel="stylesheet" href="./styles/mdl-selectfield.min.css">
+
     <!-- Your styles -->
     <link rel="stylesheet" href="styles/main.css">
 
@@ -52,41 +55,17 @@
     <!-- Always shows a header, even in smaller screens. -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
-            <!-- Larger header on large screens -->
-            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-                <div class="mdl-layout-spacer"></div>
-                <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" data-longtitle="false"></div>
-            </div>
             <div class="mdl-layout__header-row">
                 <!-- Add spacer, to align title in the center on small screens -->
                 <div class="mdl-layout--small-screen-only mdl-layout-spacer"></div>
                 <!-- Title -->
-                <span class="mdl-layout-title"><h3>Summafy</h3></span>
-                <!-- Add spacer, to align navigation to the right -->
+                <span class="mdl-layout-title" style="margin-left:40px;"><h3>Summafy</h3></span>
+                <!-- Add spacer, to align button to the right -->
                 <div class="mdl-layout-spacer"></div>
-                <!-- Navigation. We hide it in small screens. -->
-                <!--<nav class="mdl-navigation mdl-layout--large-screen-only">
-                    <a class="mdl-button mdl-js-button mdl-js-ripple-effect" href="#">
-                        <font color="#fff">Link</font>
-                    </a>
-                    <a class="mdl-button mdl-js-button mdl-js-ripple-effect" href="#">
-                        <font color="#fff">Link</font>
-                    </a>
-                    <a class="mdl-button mdl-js-button mdl-js-ripple-effect" href="#">
-                        <font color="#fff">Link</font>
-                    </a>
-                    <a class="mdl-button mdl-js-button mdl-js-ripple-effect" href="#">
-                        <font color="#fff">Link</font>
-                    </a>
-                </nav>-->
-                <div class="mdl-layout--small-screen-only g-signin2" data-onsuccess="onSignIn" data-theme="dark" data-longtitle="false"></div>
+                <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" data-longtitle="false"></div>
                 <div id="signout" style="margin-left:10px;">
                     <a class="mdl-button mdl-button--raised mdl-button--colored mdl-button--accent mdl-js-button mdl-js-ripple-effect" href="#" onclick="signOut();">Sign out</a>
                 </div>
-            </div>
-            <!-- Larger header on large screens -->
-            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-                Some heading subtext here.
             </div>
         </header>
         <div class="mdl-layout__drawer">
@@ -104,10 +83,10 @@
             <nav class="mdl-navigation">
                 <a class="mdl-navigation__link" href=""><i class="material-icons">account_circle</i> Profile</a>
                 <a class="mdl-navigation__link" href="./update-data.html"><i class="material-icons">person_add</i> Update Data</a>
-                <a class="mdl-navigation__link" href=""><i class="material-icons">trending_up</i> Grades</a>
+                <a class="mdl-navigation__link" href="./grades.html"><i class="material-icons">trending_up</i> Grades</a>
                 <a class="mdl-navigation__link" href=""><i class="material-icons">import_export</i> Courses</a>
-                <a class="mdl-navigation__link" href=""><i class="material-icons">home</i> Hostel Application</a>
-                <a class="mdl-navigation__link" href=""><i class="material-icons">account_balance_wallet</i> Fee Payment</a>
+                <a class="mdl-navigation__link" href="./hostel.html"><i class="material-icons">home</i> Hostel Application</a>
+                <a class="mdl-navigation__link" href="./fee.html"><i class="material-icons">account_balance_wallet</i> Fee Payment</a>
                 <a class="mdl-navigation__link" href=""><i class="material-icons">assignment_ind</i> Student Directory</a>
             </nav>
         </div>
@@ -205,19 +184,20 @@
                     </div>
                 </div>
             </div>
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">Summafy</div>
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Privacy & Terms</a></li>
+                    </ul>
+                </div>
+            </footer>
         </main>
-        <footer class="mdl-mini-footer">
-            <div class="mdl-mini-footer__left-section">
-                <div class="mdl-logo">Summafy</div>
-                <ul class="mdl-mini-footer__link-list">
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Privacy & Terms</a></li>
-                </ul>
-            </div>
-        </footer>
     </div>
 
     <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script src="./scripts/mdl-selectfield.min.js"></script>
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
