@@ -51,7 +51,6 @@
 </head>
 
 <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base" onload="action();">
-
     <!-- Always shows a header, even in smaller screens. -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
@@ -66,6 +65,10 @@
                 <div id="signout" style="margin-left:10px;">
                     <a class="mdl-button mdl-button--raised mdl-button--colored mdl-button--accent mdl-js-button mdl-js-ripple-effect" href="#" onclick="signOut();">Sign out</a>
                 </div>
+            </div>
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Pay Fees</a>
+                <a href="#scroll-tab-2" class="mdl-layout__tab">View past payments</a>
             </div>
         </header>
         <div class="mdl-layout__drawer">
@@ -91,89 +94,79 @@
             </nav>
         </div>
         <main class="mdl-layout__content">
-            <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-                <header class="mdl-layout__header">
-                    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-                        <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Pay Fees</a>
-                        <a href="#scroll-tab-2" class="mdl-layout__tab">View past payments</a>
+            <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+                <div class="page-content mdl-grid">
+                    <div style="margin-top:40px;" class="mdl-cell mdl-cell--3-offset-desktop mdl-cell--2-col-desktop mdl-cell--1-offset-tablet mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+                        <b>Fee Type</b>
                     </div>
-                </header>
-                <main class="mdl-layout__content">
-                    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-                        <div class="page-content mdl-grid">
-                            <div style="margin-top:40px;" class="mdl-cell mdl-cell--3-offset-desktop mdl-cell--2-col-desktop mdl-cell--1-offset-tablet mdl-cell--2-col-tablet mdl-cell--2-col-phone">
-                                <b>Fee Type</b>
-                            </div>
-                            <div class="mdl-cell mdl-cell--2-offset-desktop mdl-cell--2-col-desktop mdl-cell--2-offset-tablet mdl-cell--2-col-tablet mdl-cell--2-col-phone">
-                                <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
-                                    <select class="mdl-selectfield__select" id="type">
-                                        <option value=""></option>
-                                        <option value="option1">Regular Fees</option>
-                                        <option value="option2">Hostel Fees</option>
-                                        <option value="option3">Other Fees</option>
-                                    </select>
-                                    <div class="mdl-selectfield__icon"><i class="material-icons">arrow_drop_down</i></div>
-                                    <label class="mdl-selectfield__label" for="type">Type</label>
-                                </div>
-                            </div>
-                            <br />
-                            <div style="margin-top:40px;" class="mdl-cell mdl-cell--3-offset-desktop mdl-cell--2-col-desktop mdl-cell--1-offset-tablet mdl-cell--2-col-tablet mdl-cell--2-col-phone">
-                                <b>Paying Amount (INR)</b>
-                            </div>
-                            <div class="mdl-cell mdl-cell--2-offset-desktop mdl-cell--2-col-desktop mdl-cell--2-offset-tablet mdl-cell--2-col-tablet mdl-cell--2-col-phone">
-                                <div class="mdl-textfield mdl-js-textfield">
-                                    <input class="mdl-textfield__input" type="number" id="amount" />
-                                    <label class="mdl-textfield__label" for="amount"></label>
-                                </div>
-                            </div>
-                            <br />
-                            <div class="mdl-cell mdl-cell--5-offset-desktop mdl-cell--2-col-desktop mdl-cell--3-offset-tablet mdl-cell--2-col-tablet mdl-cell--1-offset-phone mdl-cell--2-col-phone mdl-cell-stretch" style="text-align:center;">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Pay</button>
-                            </div>
+                    <div class="mdl-cell mdl-cell--2-offset-desktop mdl-cell--2-col-desktop mdl-cell--2-offset-tablet mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
+                            <select class="mdl-selectfield__select" id="type">
+                                <option value=""></option>
+                                <option value="option1">Regular Fees</option>
+                                <option value="option2">Hostel Fees</option>
+                                <option value="option3">Other Fees</option>
+                            </select>
+                            <div class="mdl-selectfield__icon"><i class="material-icons">arrow_drop_down</i></div>
+                            <label class="mdl-selectfield__label" for="type">Type</label>
                         </div>
-                    </section>
-                    <section class="mdl-layout__tab-panel" id="scroll-tab-2">
-                        <div class="page-content mdl-grid">
-                            <div style="overflow-x:auto;" class="mdl-cell mdl-cell--stretch mdl-cell--12-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-                                <table align="center" class="mdl-data-table mdl-js-data-table mdl-shadow--8dp">
-                                    <thead>
-                                        <tr>
-                                            <th class="mdl-data-table__cell--non-numeric">Date and time</th>
-                                            <th class="mdl-data-table__cell--non-numeric">Fee Type</th>
-                                            <th class="mdl-data-table__cell--non-numeric">Paying Amount</th>
-                                            <th class="mdl-data-table__cell--non-numeric">Receipt</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="mdl-data-table__cell--non-numeric">14th April 2017, 23:34</td>
-                                            <td class="mdl-data-table__cell--non-numeric">Hostel Fees</td>
-                                            <td>35000</td>
-                                            <td class="mdl-data-table__cell--non-numeric">Under process</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="mdl-data-table__cell--non-numeric">14th April 2017, 23:20</td>
-                                            <td class="mdl-data-table__cell--non-numeric">Regular Fees</td>
-                                            <td>95000</td>
-                                            <td class="mdl-data-table__cell--non-numeric"><a href="#">Click here</a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                    </div>
+                    <br />
+                    <div style="margin-top:40px;" class="mdl-cell mdl-cell--3-offset-desktop mdl-cell--2-col-desktop mdl-cell--1-offset-tablet mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+                        <b>Paying Amount (INR)</b>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-offset-desktop mdl-cell--2-col-desktop mdl-cell--2-offset-tablet mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="number" id="amount" />
+                            <label class="mdl-textfield__label" for="amount"></label>
                         </div>
-                    </section>
-                </main>
-            </div>
-            <footer class="mdl-mini-footer">
-                <div class="mdl-mini-footer__left-section">
-                    <div class="mdl-logo">Summafy</div>
-                    <ul class="mdl-mini-footer__link-list">
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">Privacy & Terms</a></li>
-                    </ul>
+                    </div>
+                    <br />
+                    <div class="mdl-cell mdl-cell--5-offset-desktop mdl-cell--2-col-desktop mdl-cell--3-offset-tablet mdl-cell--2-col-tablet mdl-cell--1-offset-phone mdl-cell--2-col-phone mdl-cell-stretch" style="text-align:center;">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Pay</button>
+                    </div>
                 </div>
-            </footer>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+                <div class="page-content mdl-grid">
+                    <div style="overflow-x:auto;" class="mdl-cell mdl-cell--stretch mdl-cell--12-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+                        <table align="center" class="mdl-data-table mdl-js-data-table mdl-shadow--8dp">
+                            <thead>
+                                <tr>
+                                    <th class="mdl-data-table__cell--non-numeric">Date and time</th>
+                                    <th class="mdl-data-table__cell--non-numeric">Fee Type</th>
+                                    <th class="mdl-data-table__cell--non-numeric">Paying Amount</th>
+                                    <th class="mdl-data-table__cell--non-numeric">Receipt</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">14th April 2017, 23:34</td>
+                                    <td class="mdl-data-table__cell--non-numeric">Hostel Fees</td>
+                                    <td>35000</td>
+                                    <td class="mdl-data-table__cell--non-numeric">Under process</td>
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">14th April 2017, 23:20</td>
+                                    <td class="mdl-data-table__cell--non-numeric">Regular Fees</td>
+                                    <td>95000</td>
+                                    <td class="mdl-data-table__cell--non-numeric"><a href="#">Click here</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
         </main>
+        <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer__left-section">
+                <div class="mdl-logo">Summafy</div>
+                <ul class="mdl-mini-footer__link-list">
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Privacy & Terms</a></li>
+                </ul>
+            </div>
+        </footer>
     </div>
 
     <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
