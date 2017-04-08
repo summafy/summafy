@@ -76,3 +76,21 @@ html, body {
 .mdl-radio__label {
   margin-right: 10px;
 }
+.something-else {
+  margin-top: 120px;
+  overflow: visible;
+  text-align: center;
+}
+.something-else > img {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(0, 0, 0, 0);
+  transform: translate(0px, -100px);
+}
+.something-else-child {
+  position: absolute;
+  margin-top: 130px;
+  vertical-align: top;
+  left: 50%;
+  transform: translateX(-50%);
+}
