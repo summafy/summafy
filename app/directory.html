@@ -102,12 +102,12 @@
                         <div style="width: 100%; margin-left: 20px; margin-top: 10px;">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <i class="material-icons" style="width: 32px; text-align: center; position: absolute; line-height: 1.5;">search</i>
-                                <input class="mdl-textfield__input" type="text" id="search" onkeyup="searchFunc()" style="margin-left: 42px;">
-                                <label class="mdl-textfield__label" for="search" style="margin-left: 42px;">Search by name</label>
+                                <input class="mdl-textfield__input" type="text" id="searchStudent" onkeyup="searchStudentFunc()" style="margin-left: 42px;">
+                                <label class="mdl-textfield__label" for="searchStudent" style="margin-left: 42px;">Search by name</label>
                             </div>
                         </div>
                         <div style="overflow: auto;">
-                            <table class="mdl-data-table mdl-js-data-table" style="width: 100%;" id="myTable">
+                            <table class="mdl-data-table mdl-js-data-table" style="width: 100%;" id="studentTable">
                                 <thead>
                                     <tr>
                                         <th class="mdl-data-table__cell--non-numeric" style="width:40%;">Name</th>
@@ -144,7 +144,53 @@
             </section>
             <section class="mdl-layout__tab-panel" id="scroll-tab-2">
                 <div class="page-content mdl-grid">
-
+                    <div class="mdl-card mdl-cell mdl-cell--1-offset-desktop mdl-cell--10-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-shadow--8dp">
+                        <div style="width: 100%; margin-left: 20px; margin-top: 10px;">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <i class="material-icons" style="width: 32px; text-align: center; position: absolute; line-height: 1.5;">search</i>
+                                <input class="mdl-textfield__input" type="text" id="searchFaculty" onkeyup="searchFacultyFunc()" style="margin-left: 42px;">
+                                <label class="mdl-textfield__label" for="searchFaculty" style="margin-left: 42px;">Search by name</label>
+                            </div>
+                        </div>
+                        <div style="overflow: auto;">
+                            <table class="mdl-data-table mdl-js-data-table" style="width: 100%;" id="facultyTable">
+                                <thead>
+                                    <tr>
+                                        <th class="mdl-data-table__cell--non-numeric" style="width:40%;">Name</th>
+                                        <th class="mdl-data-table__cell--non-numeric" style="width:20%;">Room Number</th>
+                                        <th class="mdl-data-table__cell--non-numeric" style="width:20%;">Extension Number</th>
+                                        <th class="mdl-data-table__cell--non-numeric" style="width:20%;">Email Address</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">Ponnurangam Kumaraguru</td>
+                                        <td class="mdl-data-table__cell--non-numeric">A-404</td>
+                                        <td class="mdl-data-table__cell--non-numeric">468</td>
+                                        <td class="mdl-data-table__cell--non-numeric">pk@iiitd.ac.in</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">Pravesh Biyani</td>
+                                        <td class="mdl-data-table__cell--non-numeric">A-301</td>
+                                        <td class="mdl-data-table__cell--non-numeric">449</td>
+                                        <td class="mdl-data-table__cell--non-numeric">praveshb@iiitd.ac.in</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">Pushpendra Singh</td>
+                                        <td class="mdl-data-table__cell--non-numeric">B-304</td>
+                                        <td class="mdl-data-table__cell--non-numeric">458</td>
+                                        <td class="mdl-data-table__cell--non-numeric">psingh at iiitd.ac.in</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric"></td>
+                                        <td class="mdl-data-table__cell--non-numeric"></td>
+                                        <td class="mdl-data-table__cell--non-numeric"></td>
+                                        <td class="mdl-data-table__cell--non-numeric"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="mdl-layout__tab-panel" id="scroll-tab-3">
@@ -167,12 +213,31 @@
     <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <script src="./scripts/mdl-selectfield.min.js"></script>
     <script>
-        function searchFunc() {
+        function searchStudentFunc() {
             // Declare variables
             var input, filter, table, tr, td, i;
-            input = document.getElementById("search");
+            input = document.getElementById("searchStudent");
             filter = input.value.toUpperCase();
-            table = document.getElementById("myTable");
+            table = document.getElementById("studentTable");
+            tr = table.getElementsByTagName("tr");
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+        function searchFacultyFunc() {
+            // Declare variables
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("searchFaculty");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("facultyTable");
             tr = table.getElementsByTagName("tr");
             // Loop through all table rows, and hide those who don't match the search query
             for (i = 0; i < tr.length; i++) {
