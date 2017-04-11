@@ -81,52 +81,21 @@
                 <div class="mdl-layout-spacer"></div>
             </div>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="./home.html"><i class="material-icons">arrow_back</i> Home</a>
-                <a class="mdl-navigation__link" href="./profile.html"><i class="material-icons">account_circle</i> Profile</a>
-                <a class="mdl-navigation__link" href="./update-data.html"><i class="material-icons">person_add</i> Update Data</a>
-                <a class="mdl-navigation__link" href="./grades.html"><i class="material-icons">trending_up</i> Grades</a>
-                <a class="mdl-navigation__link" href="./courses.html"><i class="material-icons">import_export</i> Courses</a>
-                <a class="mdl-navigation__link" href="./hostel.html"><i class="material-icons">home</i> Hostel Application</a>
-                <a class="mdl-navigation__link" href="./fee.html"><i class="material-icons">account_balance_wallet</i> Fee Payment</a>
-                <a class="mdl-navigation__link" href="./directory.html"><i class="material-icons">assignment_ind</i> Directory</a>
+                <a class="mdl-navigation__link" href="./student_home.html"><i class="material-icons">arrow_back</i> Home</a>
+                <a class="mdl-navigation__link" href="./student_profile.html"><i class="material-icons">account_circle</i> Profile</a>
+                <a class="mdl-navigation__link" href="./student_update-data.html"><i class="material-icons">person_add</i> Update Data</a>
+                <a class="mdl-navigation__link" href="./student_grades.html"><i class="material-icons">trending_up</i> Grades</a>
+                <a class="mdl-navigation__link" href="./student_courses.html"><i class="material-icons">import_export</i> Courses</a>
+                <a class="mdl-navigation__link" href="./student_hostel.html"><i class="material-icons">home</i> Hostel Application</a>
+                <a class="mdl-navigation__link" href="./student_fee.html"><i class="material-icons">account_balance_wallet</i> Fee Payment</a>
+                <a class="mdl-navigation__link" href="./student_directory.html"><i class="material-icons">assignment_ind</i> Directory</a>
             </nav>
         </div>
         <main class="mdl-layout__content">
             <div class="page-content mdl-grid">
                 <div class="mdl-card mdl-cell mdl-cell--3-offset-desktop mdl-cell--6-col-desktop mdl-cell--1-offset-tablet mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--8dp">
                     <div class="mdl-card__title mdl-color--accent mdl-color-text--white">
-                        <h2 class="mdl-card__title-text">View status of pending request</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        <table class="mdl-data-table mdl-js-data-table" align="center">
-                            <tbody>
-                                <tr>
-                                    <td class="mdl-data-table__cell--non-numeric"><b>Name</b></td>
-                                    <td class="mdl-data-table__cell--non-numeric">Divay Prakash</td>
-                                </tr>
-                                <tr>
-                                    <td class="mdl-data-table__cell--non-numeric"><b>Session Detail</b></td>
-                                    <td class="mdl-data-table__cell--non-numeric">Monsoon 2017</td>
-                                </tr>
-                                <tr>
-                                    <td class="mdl-data-table__cell--non-numeric"><b>Hostel Type</b></td>
-                                    <td class="mdl-data-table__cell--non-numeric">Boys Hostel</td>
-                                </tr>
-                                <tr>
-                                    <td class="mdl-data-table__cell--non-numeric"><b>Room Type</b></td>
-                                    <td class="mdl-data-table__cell--non-numeric">Single Room</td>
-                                </tr>
-                                <tr>
-                                    <td class="mdl-data-table__cell--non-numeric"><b>Status</b></td>
-                                    <td class="mdl-data-table__cell--non-numeric"><font color="red"><b>Pending</b></font></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="mdl-card mdl-cell mdl-cell--3-offset-desktop mdl-cell--6-col-desktop mdl-cell--1-offset-tablet mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--8dp">
-                    <div class="mdl-card__title mdl-color--accent mdl-color-text--white">
-                        <h2 class="mdl-card__title-text">Request hostel accomodation</h2>
+                        <h2 class="mdl-card__title-text">Fill the required fields in the form to request updation in your data.</h2>
                     </div>
                     <div>
                         <form class="mdl-card__form">
@@ -135,43 +104,49 @@
                                 <label class="mdl-textfield__label" for="name">Name</label>
                             </div>
                             <br />
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="fname" />
+                                <label class="mdl-textfield__label" for="fname">Father's Name</label>
+                            </div>
+                            <br />
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="mname" />
+                                <label class="mdl-textfield__label" for="mname">Nother's Name</label>
+                            </div>
+                            <br />
+                            <div class="mdl-card__form-spacer">
+                                Gender &nbsp; &nbsp; &nbsp;
+                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                                    <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+                                    <span class="mdl-radio__label">Male</span>
+                                </label>
+                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                                    <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+                                    <span class="mdl-radio__label">Female</span>
+                                </label>
+                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
+                                    <input type="radio" id="option-3" class="mdl-radio__button" name="options" value="3">
+                                    <span class="mdl-radio__label">Other</span>
+                                </label>
+                            </div>
+                            <div class="mdl-card__form-spacer">
+                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                                    <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
+                                    <span class="mdl-checkbox__label">Physically Disabled</span>
+                                </label>
+                            </div>
                             <div>
                                 <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
                                     <select class="mdl-selectfield__select" id="category">
                                         <option value=""></option>
-                                        <option value="option1">Monsoon Semester</option>
-                                        <option value="option2">Summer</option>
-                                        <option value="option3">Winter Semester</option>
+                                        <option value="option1">General</option>
+                                        <option value="option2">SC</option>
+                                        <option value="option3">ST</option>
+                                        <option value="option4">OBC</option>
                                     </select>
                                     <div class="mdl-selectfield__icon"><i class="material-icons">arrow_drop_down</i></div>
-                                    <label class="mdl-selectfield__label" for="category">Sesssion Detail</label>
+                                    <label class="mdl-selectfield__label" for="category">Category</label>
                                 </div>
-                            </div>
-                            <div class="mdl-card__form-spacer">
-                                Hostel Type &nbsp; &nbsp; &nbsp;
-                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-                                    <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1">
-                                    <span class="mdl-radio__label">Boys</span>
-                                </label>
-                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-                                    <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
-                                    <span class="mdl-radio__label">Girls</span>
-                                </label>
-                            </div>
-                            <div class="mdl-card__form-spacer">
-                                Room Type &nbsp; &nbsp; &nbsp;
-                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-                                    <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1">
-                                    <span class="mdl-radio__label">Single</span>
-                                </label>
-                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-                                    <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
-                                    <span class="mdl-radio__label">Double</span>
-                                </label>
-                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
-                                    <input type="radio" id="option-3" class="mdl-radio__button" name="options" value="3">
-                                    <span class="mdl-radio__label">Dormitory</span>
-                                </label>
                             </div>
                         </form>
                         <div class="mdl-card__actions mdl-card--border">
