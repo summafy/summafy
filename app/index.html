@@ -123,7 +123,7 @@
                         <br />
                         <p>By clicking 'Sign up', you agree to the Privacy Policy and Cookie Policy.</p>
                         <hr />
-                        <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Sign Up</button>
+                        <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="signup-button">Sign Up</button>
                     </div>
                 </div>
             </div>
@@ -141,6 +141,25 @@
 
     <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <script src="./scripts/mdl-selectfield.min.js"></script>
+    <script>
+        var button = document.getElementById('signup-button');
+        button.onclick = function() {
+            var roleSelect = document.getElementById("role");
+            var role = roleSelect.options[roleSelect.selectedIndex].value;
+            if (role == 'student') {
+                location.href = "./home.html";
+            }
+            else if (role == 'faculty') {
+                location.href = "./home.html";
+            }
+            else if (role == 'staff') {
+                location.href = "./home.html";
+            }
+            else {
+                window.alert("Please select role!");
+            }
+        };
+    </script>
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
