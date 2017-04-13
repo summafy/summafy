@@ -109,7 +109,7 @@
                         </label>
                     </div>
                     <hr style="margin: 0px;" />
-                    <div style="width: 100%; margin: 20px; margin-bottom: 10px;">
+                    <div style="width: calc(100%-40px); margin: 20px; margin-bottom: 10px; overflow: auto;">
                         <div style="margin-bottom: 10px;"><b>Apply filters</b></div>
                         <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
                             <select class="mdl-selectfield__select" id="filter_on">
@@ -132,34 +132,24 @@
                         </div>
                     </div>
                     <hr style="margin: 0px;" />
-                    <div style="width: 100%; margin-top: 20px; margin-bottom: 10px; margin-left: 20px;">
-                        <div ><b>Sort</b></div>
-                        <table style="margin: 0px;">
-                            <tr>
-                                <td>
-                                    <i class="material-icons" style="width: 32px;">sort</i>
-                                </td>
-                                <td>
-                                    <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
-                                        <select class="mdl-selectfield__select" id="filter_on">
-                                            <option value=""></option>
-                                            <option value="option1" selected="selected">Name</option>
-                                            <option value="option2">Roll Number</option>
-                                        </select>
-                                        <div class="mdl-selectfield__icon"><i class="material-icons">arrow_drop_down</i></div>
-                                        <label class="mdl-selectfield__label" for="filter_on"><font color="#607d8b">Choose filter</font></label>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
+                    <div style="width: calc(100%-40px); margin: 20px; margin-bottom: 10px;">
+                        <div><b>Sort</b></div>
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
+                            <select class="mdl-selectfield__select" id="sort_on">
+                                <option value=""></option>
+                                <option value="option1" selected="selected">Name</option>
+                                <option value="option2">Roll Number</option>
+                            </select>
+                            <div class="mdl-selectfield__icon"><i class="material-icons">arrow_drop_down</i></div>
+                            <label class="mdl-selectfield__label" for="sort_on"><font color="#607d8b">Sort by</font></label>
+                        </div>
                     </div>
                     <hr style="margin: 0px;" />
-                    <div style="width: 100%; margin-top: 20px; margin-bottom: 10px; margin-left: 20px;">
+                    <div style="width: calc(100%-40px); margin: 20px; margin-bottom: 10px;">
                         <div ><b>Search</b></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <i class="material-icons" style="width: 32px; text-align: center; position: absolute; line-height: 1.5;">search</i>
-                            <input class="mdl-textfield__input" type="text" id="searchStudent" onkeyup="searchStudentFunc()" style="margin-left: 42px;">
-                            <label class="mdl-textfield__label" for="searchStudent" style="margin-left: 42px;">Search by name</label>
+                            <input class="mdl-textfield__input" type="text" id="searchStudent" onkeyup="searchStudentFunc()">
+                            <label class="mdl-textfield__label" for="searchStudent">Search by name</label>
                         </div>
                     </div>
                     <div style="overflow: auto;">
